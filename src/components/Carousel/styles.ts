@@ -23,7 +23,7 @@ export const ScrollContainer = styled.div`
   overflow-x: auto;
   max-width: 139.2rem;
   width: 100%;
-
+  cursor: pointer;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 160, 0.2) transparent;
 

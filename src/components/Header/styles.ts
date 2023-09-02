@@ -46,6 +46,7 @@ export const Wrapper = styled.div`
 
   .user-icon {
     display: none;
+    cursor: pointer;
   }
 
   @media (min-width: 768px) {
@@ -68,6 +69,7 @@ export const Wrapper = styled.div`
       background-color: none;
       background: rgba(237, 237, 237, 0.2);
       border-radius: 9999px;
+      cursor: pointer;
     }
   }
 `

@@ -3,14 +3,21 @@ import * as S from './styles'
 import { Input } from '../../components/CustomInput'
 import { Button } from '../../components/CustomButtom'
 import ButtonControl from '../../components/CustomButtom/ButtomControl'
+import { useNavigate } from 'react-router-dom'
 
 const Login: React.FC = () => {
+  const navigate = useNavigate()
+
+  const handleSubmit = () => {
+    navigate('/')
+  }
+
   return (
     <S.Container>
       <div className="container-login-form">
         <S.Logo src="./logo.png" alt="Logo" />
 
-        <S.Form>
+        <S.Form onSubmit={handleSubmit}>
           <S.Wrapper>
             <label htmlFor="">Email</label>
             <Input.Root className="input-container">

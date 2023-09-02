@@ -50,7 +50,7 @@ const UserModal: React.FC = () => {
             <span>{link.linkName}</span>
           </S.NavButton>
         ))}
-        <Link to="/" className="sign-out">
+        <Link to="/login" className="sign-out">
           Sair
         </Link>
       </S.Nav>
