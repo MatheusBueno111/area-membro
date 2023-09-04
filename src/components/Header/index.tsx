@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ComponentProps, useState } from 'react'
 import * as S from './styles'
 import { SandwichIcon } from '../Icons/SandwichIcon'
 import { SearchIcon } from '../Icons/SearchIcon'
@@ -6,24 +6,31 @@ import { Input } from '../CustomInput'
 import { UserIcon } from '../Icons/UserIcon'
 import UserModal from '../UserModal'
 
-const Header: React.FC = () => {
-  const [isUserModalOpen, setUserModalOpen] = useState(false) // Estado para controlar a visibilidade do modal
+interface HeaderProps extends ComponentProps<'header'> {
+  showsearchbar?: boolean
+}
+
+const Header: React.FC<HeaderProps> = ({ showsearchbar = true, ...rest }) => {
+  const [isUserModalOpen, setUserModalOpen] = useState(false)
 
   const handleUserIconClick = () => {
-    setUserModalOpen((value) => !value) // Abre o modal quando o ícone do usuário é clicado
+    setUserModalOpen((value) => !value)
   }
 
   return (
-    <S.Container>
+    <S.Container {...rest}>
       <div className="sandwich-icon" onClick={handleUserIconClick}>
         <SandwichIcon />
       </div>
-      <Input.Root className="search-bar">
-        <Input.Prefix>
-          <SearchIcon />
-        </Input.Prefix>
-        <Input.Control placeholder="Pesquisar" />
-      </Input.Root>
+      <S.SearchBar showsearchbar={showsearchbar}>
+        <Input.Root className="search-bar">
+          <Input.Prefix>
+            <SearchIcon />
+          </Input.Prefix>
+          <Input.Control placeholder="Pesquisar" />
+        </Input.Root>
+      </S.SearchBar>
+
       <img src="./logo.png" alt="" />
       <S.Wrapper>
         <div className="search-icon">

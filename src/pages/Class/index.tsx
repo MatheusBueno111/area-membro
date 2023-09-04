@@ -10,7 +10,7 @@ import TabsComentsOrDoubts from './components/TabsComentsOrDoubts'
 const Class: React.FC = () => {
   return (
     <S.Container>
-      <Header />
+      <Header showsearchbar={false} />
       <S.Wrapper>
         <S.Main>
           <S.VideoClass />

@@ -1,4 +1,9 @@
+import { ComponentProps } from 'react'
 import { styled } from 'styled-components'
+
+interface SearchBarProps extends ComponentProps<'div'> {
+  showsearchbar?: boolean
+}
 
 export const Container = styled.header`
   display: flex;
@@ -30,6 +35,10 @@ export const Container = styled.header`
       order: -1;
     }
   }
+`
+
+export const SearchBar = styled.div<SearchBarProps>`
+  display: ${({ showsearchbar }) => (showsearchbar ? 'flex' : 'none')};
 `
 
 export const Wrapper = styled.div`
