@@ -15,4 +15,6 @@ export const Container = styled.div<ContainerProps>`
   background-color: ${({ bgcolor }) => bgcolor};
   border-radius: 0.4rem;
   align-self: center;
+  gap: 0.8rem;
+  justify-content: center;
 `

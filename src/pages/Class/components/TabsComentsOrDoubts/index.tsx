@@ -42,11 +42,11 @@ const TabsComentsOrDoubts: React.FC = () => {
       ) : (
         <S.NewDoubt>
           <Input.Root>
-            <Input.Control placeholder="Deixar um comentário" type="text" />
+            <Input.Control placeholder="Deixar uma dúvida" type="text" />
           </Input.Root>
 
           <Button.Root maxwidth="11rem" bgcolor="#FFFFFF">
-            <Button.Control>Enviar</Button.Control>
+            <Button.Control>Arquivo</Button.Control>
             <Button.Icon icon={PaperClipIcon} />
           </Button.Root>
 
