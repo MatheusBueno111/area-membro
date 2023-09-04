@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex: 1;
 `
 
-export const Warpper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 4rem;
@@ -18,6 +18,7 @@ export const Warpper = styled.div`
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
+  max-width: 81.5rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -28,26 +29,61 @@ export const Main = styled.main`
   }
 `
 
-export const ComplementMaterial = styled.div`
+export const VideoClass = styled.div`
+  display: flex;
+  border-radius: 0.8rem;
+  height: 46rem;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors['text-dark']};
+`
+
+export const TitleAndConcludeVideo = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+  margin-bottom: 2rem;
+
+  h3 {
+    color: ${({ theme }) => theme.colors.white};
+    max-width: 38rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+`
+
+export const DescriptionVideoClass = styled.p`
+  color: #b2b2b2;
+  font-size: 1.6rem;
+  text-align: justify;
+`
+
+export const ComplementaryMaterial = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 4.3rem;
   gap: 1.2rem;
+  margin-bottom: 8.2rem;
+
   .class-img {
     display: flex;
     border-radius: 0.4rem;
     height: 12rem;
-    min-width: 12rem;
+    max-width: 12rem;
+    width: 100%;
     background-color: #232832;
   }
 
-  .content {
+  .complementary-material-description {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 
     p {
-      color: #ffc019;
+      color: ${({ theme }) => theme.colors.yellow};
       font-size: 1.8rem;
       font-weight: 700;
     }
@@ -55,7 +91,7 @@ export const ComplementMaterial = styled.div`
     span {
       color: #b2b2b2;
       font-size: 1.6rem;
-      font-style: normal;
+      text-align: justify;
     }
   }
 `
@@ -92,6 +128,7 @@ export const Comments = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-self: start;
+  margin-top: 8.1rem;
   margin-bottom: 12rem;
   gap: 1.2rem;
 
@@ -121,66 +158,4 @@ export const Comments = styled.div`
     background-color: white;
     border-radius: 9999px;
   }
-`
-
-export const ImageClass = styled.div`
-  display: flex;
-  border-radius: 0.8rem;
-
-  min-width: 46rem;
-  height: 81.5rem;
-  width: 100%;
-
-  background-color: ${({ theme }) => theme.colors['text-dark']};
-`
-export const VideoTitle = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 2.4rem;
-  margin-bottom: 2.4rem;
-
-  h3 {
-    color: ${({ theme }) => theme.colors.white};
-    max-width: 38rem;
-    width: 100%;
-    font-weight: 700;
-  }
-`
-
-export const ContentAside = styled.div`
-  display: flex;
-  flex-direction: row;
-  color: ${({ theme }) => theme.colors.white};
-  gap: 1.2rem;
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  span {
-    color: #b2b2b2;
-  }
-`
-
-export const AsideImageClass = styled.div`
-  max-width: 9.5rem;
-  max-height: 16.8rem;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4rem;
-  background-color: ${({ theme }) => theme.colors['text-dark']};
-`
-
-export const Aside = styled.aside`
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
 `
