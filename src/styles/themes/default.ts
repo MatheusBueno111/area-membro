@@ -6,6 +6,7 @@ export const defaultTheme = {
     bgInput: '#232832',
     'text-gray': '#717171',
     'text-dark': '#232832',
+    'text-white':'#FFFFFF',
   },
   fonts: {
     text: 'IBM Plex Sans',
