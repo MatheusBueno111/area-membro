@@ -5,13 +5,17 @@ import { Input } from '../CustomInput'
 import { Button } from '../CustomButtom'
 import ButtonControl from '../CustomButtom/ButtomControl'
 
-const ModalBannerEdit: React.FC = () => {
+interface ModalBannerEditProps {
+  onClose: () => void
+}
+
+const ModalBannerEdit: React.FC<ModalBannerEditProps> = ({ onClose }) => {
   return (
     <S.Container>
       <S.Wrapper>
         <div className="container">
           <div className="title">Criar novo curso</div>
-          <div className="exit-icon">
+          <div className="exit-icon" onClick={onClose}>
             <ExitIcon />
           </div>
         </div>
@@ -44,12 +48,20 @@ const ModalBannerEdit: React.FC = () => {
       <S.Wrapper>
         <div className="container">
           <Button.Root className="cancel-button">
-            <ButtonControl className="c-cancel-button" type="submit">
+            <ButtonControl
+              className="c-cancel-button"
+              type="submit"
+              onClick={onClose}
+            >
               Cancelar
             </ButtonControl>
           </Button.Root>
 
-          <Button.Root bgcolor="#FFC019" className="save-button">
+          <Button.Root
+            bgcolor="#FFC019"
+            className="save-button"
+            onClick={onClose}
+          >
             <ButtonControl type="submit">Salvar</ButtonControl>
           </Button.Root>
         </div>

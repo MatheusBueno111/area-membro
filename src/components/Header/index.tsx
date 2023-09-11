@@ -33,6 +33,10 @@ const Header: React.FC<HeaderProps> = ({ ...rest }) => {
   const isCarrousselModalOpen = activeModal === ModalType.Carroussel
   const isBannerModalOpen = activeModal === ModalType.Banner
 
+  const handleCloseBannerEditModal = () => {
+    setActiveModal(ModalType.None)
+  }
+
   return (
     <S.Container {...rest}>
       <div
@@ -68,7 +72,9 @@ const Header: React.FC<HeaderProps> = ({ ...rest }) => {
       </S.Wrapper>
       {isUserModalOpen && <UserModal />}
       {isCarrousselModalOpen && <CarrousselModal />}
-      {isBannerModalOpen && <ModalBannerEdit />}
+      {isBannerModalOpen && (
+        <ModalBannerEdit onClose={handleCloseBannerEditModal} />
+      )}
     </S.Container>
   )
 }
