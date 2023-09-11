@@ -22,10 +22,14 @@ export const Main = styled.main`
   width: 100%;
   justify-content: center;
   align-items: center;
-
+  padding: 1.6rem;
   .description-class {
     color: #b2b2b2;
     font-size: 1.6rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: unset;
   }
 `
 
@@ -48,51 +52,56 @@ export const TitleAndConcludeVideo = styled.div`
 
   h3 {
     color: ${({ theme }) => theme.colors.white};
-    max-width: 38rem;
+    max-width: 19.8rem;
     width: 100%;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  div {
+    max-width: 10rem;
+    width: 100%;
+  }
+  .conclude-button {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 2.4rem;
+      max-width: 38rem;
+    }
+    div {
+      max-width: 20rem;
+      width: 100%;
+    }
+
+    .conclude-button {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
   }
 `
 
-export const DescriptionVideoClass = styled.p`
-  color: #b2b2b2;
-  font-size: 1.6rem;
-  text-align: justify;
+export const DescriptionVideoClass = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const ComplementaryMaterial = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 4.3rem;
-  gap: 1.2rem;
-  margin-bottom: 8.2rem;
+  display: none;
 
-  .class-img {
+  @media (min-width: 768px) {
     display: flex;
-    border-radius: 0.4rem;
-    height: 12rem;
-    max-width: 12rem;
-    width: 100%;
-    background-color: #232832;
-  }
-
-  .complementary-material-description {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-
-    p {
-      color: ${({ theme }) => theme.colors.yellow};
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    span {
-      color: #b2b2b2;
-      font-size: 1.6rem;
-      text-align: justify;
-    }
   }
 `
 
@@ -120,42 +129,5 @@ export const WrapperComents = styled.div`
     flex-direction: row;
     width: 100%;
     gap: 2rem;
-  }
-`
-
-export const Comments = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: start;
-  margin-top: 8.1rem;
-  margin-bottom: 12rem;
-  gap: 1.2rem;
-
-  .comment {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    padding: 2.4rem;
-    background-color: #232832;
-    max-width: 59.4rem;
-    border-radius: 0.8rem;
-  }
-
-  .comment-tiltle {
-    display: flex;
-    color: white;
-    font-weight: 700;
-  }
-
-  .comment-content {
-    color: #b2b2b2;
-  }
-
-  .user {
-    min-width: 48px;
-    height: 48px;
-    background-color: white;
-    border-radius: 9999px;
   }
 `

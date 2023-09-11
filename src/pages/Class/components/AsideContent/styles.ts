@@ -1,11 +1,16 @@
 import { styled } from 'styled-components'
 
 export const Aside = styled.aside`
-  display: flex;
+  display: none;
+
   flex-direction: column;
   gap: 2.4rem;
   max-width: 40.1rem;
   width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `
 
 export const ContentAside = styled.div`
