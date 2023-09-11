@@ -1,44 +1,41 @@
 // EditCarroussel.tsx
 
-import React, { useState } from 'react';
-import * as S from './styles';
-import { Button } from '../CustomButtom';
-import ButtonControl from '../CustomButtom/ButtomControl';
-import { ViewIcon } from '../Icons/ViewIcon';
-import { SandwichIcon } from '../Icons/SandwichIcon';
-import Header from '../Header';
+import React, { useState } from 'react'
+import * as S from './styles'
+import { Button } from '../CustomButtom'
+import ButtonControl from '../CustomButtom/ButtomControl'
+import { ViewIcon } from '../Icons/ViewIcon'
+import { SandwichIcon } from '../Icons/SandwichIcon'
+import Header from '../Header'
 
 // Importe os modais aqui
-import ModalCreateClass from '../ModalCreateClass';
-import ModalEditClass from '../ModalEditClass';
-import ModalCriarCurso from '../ModalCriarCurso';
+import ModalCreateClass from '../ModalCreateClass'
+import ModalEditClass from '../ModalEditClass'
+import ModalCriarCurso from '../ModalCriarCurso'
+import { UseCurso } from '../../hooks/useCurso'
 
 const EditCarroussel: React.FC = () => {
-  const [isCreateClassModalOpen, setIsCreateClassModalOpen] = useState(false);
-  const [isEditClassModalOpen, setIsEditClassModalOpen] = useState(false);
-  const [isModalCriarCurso, setIsModalCriarCurso] = useState(false);
- 
+  const [isCreateClassModalOpen, setIsCreateClassModalOpen] = useState(false)
+  const [isEditClassModalOpen, setIsEditClassModalOpen] = useState(false)
+  const [isModalCriarCurso, setIsModalCriarCurso] = useState(false)
+  const { setCursos } = UseCurso()
+
   const openModalCriarCurso = () => {
-    setIsModalCriarCurso(true);
-  };
+    setIsModalCriarCurso(true)
+  }
 
   const openCreateClassModal = () => {
-    setIsCreateClassModalOpen(true);
-  };
+    setIsCreateClassModalOpen(true)
+  }
 
   const closeCreateClassModal = () => {
-    setIsCreateClassModalOpen(false);
-  };
+    setIsCreateClassModalOpen(false)
+  }
 
   const openEditClassModal = () => {
     // Altere o estado apenas para o modal de edição
-    setIsEditClassModalOpen(true);
-  };
-
-  const closeEditClassModal = () => {
-    // Feche apenas o modal de edição
-    setIsEditClassModalOpen(false);
-  };
+    setIsEditClassModalOpen(true)
+  }
 
   return (
     <S.Container>
@@ -46,17 +43,17 @@ const EditCarroussel: React.FC = () => {
       <div className="container">
         <div className="title">Curso de social media expert</div>
         <div className="buttons">
-          <Button.Root bgcolor="#FFC019" className="top-button" onClick={openModalCriarCurso}>
+          <Button.Root
+            bgcolor="#FFC019"
+            className="top-button"
+            onClick={openModalCriarCurso}
+          >
             <ButtonControl className="text-button" type="submit">
               Editar Curso
             </ButtonControl>
           </Button.Root>
 
-          <Button.Root
-            bgcolor="#FFC019"
-            className="top-button"
-             
-          >
+          <Button.Root bgcolor="#FFC019" className="top-button">
             <ButtonControl className="text-button" type="submit">
               Ver curso
             </ButtonControl>
@@ -72,9 +69,13 @@ const EditCarroussel: React.FC = () => {
             Aulas
             <div className="sub-title">Adicione aulas dentro do seu módulo</div>
           </div>
-          <Button.Root bgcolor="#FFC019" className="y-button" onClick={openCreateClassModal}>
+          <Button.Root
+            bgcolor="#FFC019"
+            className="y-button"
+            onClick={openCreateClassModal}
+          >
             <ButtonControl className="text-2-button" type="submit">
-                Adicionar Aula
+              Adicionar Aula
             </ButtonControl>
           </Button.Root>
         </div>
@@ -104,13 +105,18 @@ const EditCarroussel: React.FC = () => {
         </div>
       </div>
 
-       <div className="modal">
-      {isCreateClassModalOpen && <ModalCreateClass  />}
-      {isEditClassModalOpen && <ModalEditClass  />}
-      {isModalCriarCurso && <ModalCriarCurso  />}
-       </div> 
+      <div className="modal">
+        {isCreateClassModalOpen && <ModalCreateClass />}
+        {isEditClassModalOpen && <ModalEditClass />}
+        {isModalCriarCurso && (
+          <ModalCriarCurso
+            setCursos={setCursos}
+            onClose={closeCreateClassModal}
+          />
+        )}
+      </div>
     </S.Container>
-  );
-};
+  )
+}
 
-export default EditCarroussel;
+export default EditCarroussel
