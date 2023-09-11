@@ -36,6 +36,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
   }
+
   p {
     font-family: IBM Plex Sans;
     font-size: 16px;
@@ -89,7 +90,7 @@ export const Container = styled.div`
     border: 1px solid #232832;
     padding: 15px;
   }
-
+  
   .buttons {
     display: flex;
     flex-direction: row;
@@ -121,6 +122,8 @@ export const Container = styled.div`
     font-weight: 400;
     white-space: nowrap;
   }
+
+  
 
   @media (max-width: 768px) {
     width: 380px;

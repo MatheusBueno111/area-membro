@@ -3,6 +3,8 @@ import * as S from './styles'
 import { Input } from '../CustomInput'
 import { ExitIcon } from '../Icons/ExitIcon'
 import SwitchButton from '../SwitchButton'
+import { Button } from '../CustomButtom'
+import ButtonControl from '../CustomButtom/ButtomControl'
 
 const ModalCriarCurso: React.FC = () => {
   return (
@@ -48,6 +50,9 @@ const ModalCriarCurso: React.FC = () => {
           </div>
         </div>
         <span>Ao bloquear um módulo, os alunos não terão acesso</span>
+        <Button.Root bgcolor="#FFC019" className="save-button">
+          <ButtonControl type="submit">Salvar</ButtonControl>
+        </Button.Root>
       </S.Wrapper>
     </S.Container>
   )

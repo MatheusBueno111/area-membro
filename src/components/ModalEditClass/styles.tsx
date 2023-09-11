@@ -5,14 +5,40 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.background};
   width: 485px;
-  height: 700px;
+  height: 760px;
   border-radius: 8px;
   padding: 1rem 0.8rem 2.4rem 2rem;
   position: absolute;
-  top: 80px;
+  top: 100px;
+  left: 0%;
   right: 10px;
   margin: auto;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
+  .exclude-button {
+    width: 50px;
+    margin-right: auto;
+    margin-left: 10px;
+    max-width: 70px;
+    background: none;
+  }
+  .exclude-button-text {
+    color: #FF3131;
+    font-weight: 400;
+  }
+  .save-button {
+    margin-left: auto;
+    max-width: 70px;
+  }
+  .cancel-button {
+    margin-left: auto;
+    margin-left: 140px;
+    max-width: 150px;
+    background: none;
+  }
+  .c-cancel-button {
+    color: #fff;
+    font-weight: 400;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -94,6 +120,7 @@ export const Wrapper = styled.div`
     color: #fff;
     margin-left: 8px;
   }
+  
 
   @media (min-width: 768px) {
     width: 45rem;
@@ -118,32 +145,10 @@ export const Wrapper = styled.div`
     margin-left: auto;
   }
 
-  .save-button {
-    margin-left: auto;
-    max-width: 150px;
-  }
-  .cancel-button {
-    margin-left: auto;
-    margin-left: 140px;
-    max-width: 150px;
-    background: none;
-  }
-  .c-cancel-button {
-    color: #fff;
-    font-weight: 400;
-  }
 
-  .exclude-button {
-    width: 50px;
-    margin-right: auto;
-    margin-left: 140px;
-    max-width: 150px;
-    background: none;
-  }
-  .exclude-button-text {
-    color: #ff3131;
-    font-weight: 400;
-  }
+
+
+
 
   .add-button {
     width: 140px;
@@ -156,4 +161,5 @@ export const Wrapper = styled.div`
     color: #fff;
     font-weight: 400;
   }
+
 `
