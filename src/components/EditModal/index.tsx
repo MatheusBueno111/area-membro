@@ -5,7 +5,11 @@ import { Button } from '../CustomButtom'
 import ButtonControl from '../CustomButtom/ButtomControl'
 import { ExitIcon } from '../Icons/ExitIcon'
 
-const EditModal: React.FC = () => {
+interface EditModalProps {
+  onClose: () => void
+}
+
+const EditModal: React.FC<EditModalProps> = ({ onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(true)
   const handleCloseModal = () => {
     setIsModalOpen(false)
@@ -17,7 +21,7 @@ const EditModal: React.FC = () => {
         <S.Container>
           <div className="container">
             <div className="title">Ordenar carrocéis</div>
-            <div className="exit-icon" onClick={handleCloseModal}>
+            <div className="exit-icon" onClick={onClose}>
               <ExitIcon />
             </div>
           </div>

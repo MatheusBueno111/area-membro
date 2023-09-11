@@ -5,7 +5,11 @@ import { Input } from '../CustomInput'
 import { Button } from '../CustomButtom'
 import ButtonControl from '../CustomButtom/ButtomControl'
 
-const NewCarrousselModal: React.FC = () => {
+interface NewCarrousselModalProps {
+  onClose: () => void
+}
+
+const NewCarrousselModal: React.FC<NewCarrousselModalProps> = ({ onClose }) => {
   const [carouselName, setCarouselName] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(true)
 
@@ -25,7 +29,7 @@ const NewCarrousselModal: React.FC = () => {
         <S.Container>
           <div className="container">
             <div className="title">Novo Carrossel</div>
-            <div className="exit-icon" onClick={handleCloseModal}>
+            <div className="exit-icon" onClick={onClose}>
               <ExitIcon />
             </div>
           </div>

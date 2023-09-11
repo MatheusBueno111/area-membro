@@ -12,34 +12,42 @@ const CarrousselModal: React.FC = () => {
     useState(false)
 
   const openNewCarrousselModal = () => {
-    setIsNewCarrousselModalOpen(true)
+    setIsNewCarrousselModalOpen((value) => !value)
+  }
+
+  const closeNewCarrousselModal = () => {
+    setIsNewCarrousselModalOpen(false)
   }
 
   const handleOpenEditModal = () => {
-    setIsEditModalOpen(true)
+    setIsEditModalOpen((value) => !value)
+  }
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false)
   }
 
   return (
     <S.Container>
-      <div className="icon-container">
+      <div className="icon-container" onClick={openNewCarrousselModal}>
         <PlusCircleIcon />
-        <p onClick={openNewCarrousselModal}>Novo carrossel</p>
+        <p>Novo carrossel</p>
       </div>
 
-      <div className="icon-container">
+      <div className="icon-container" onClick={handleOpenEditModal}>
         <SandwichIcon />
-        <p onClick={handleOpenEditModal}>Editar</p>{' '}
+        <p>Editar</p>
       </div>
 
       {isNewCarrousselModalOpen && (
         <S.ModalContainer>
-          <NewCarrousselModal />
+          <NewCarrousselModal onClose={closeNewCarrousselModal} />
         </S.ModalContainer>
       )}
 
       {isEditModalOpen && (
         <S.ModalContainer>
-          <EditModal />
+          <EditModal onClose={handleCloseEditModal} />
         </S.ModalContainer>
       )}
     </S.Container>
