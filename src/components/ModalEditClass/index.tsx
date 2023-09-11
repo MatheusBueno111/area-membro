@@ -4,7 +4,11 @@ import { Input } from '../CustomInput'
 import { Button } from '../CustomButtom'
 import ButtonControl from '../CustomButtom/ButtomControl'
 
-const ModalEditClass: React.FC = () => {
+interface ModalEditClassProps {
+  onClose: () => void
+}
+
+const ModalEditClass: React.FC<ModalEditClassProps> = ({ onClose }) => {
   const [selectedButton, setSelectedButton] = useState<number | null>(null)
 
   const handleButtonClick = (index: number) => {
@@ -91,12 +95,20 @@ const ModalEditClass: React.FC = () => {
           </ButtonControl>
         </Button.Root>
         <Button.Root className="cancel-button">
-          <ButtonControl className="c-cancel-button" type="submit">
+          <ButtonControl
+            className="c-cancel-button"
+            type="submit"
+            onClick={onClose}
+          >
             Cancelar
           </ButtonControl>
         </Button.Root>
 
-        <Button.Root bgcolor="#FFC019" className="save-button">
+        <Button.Root
+          bgcolor="#FFC019"
+          className="save-button"
+          onClick={onClose}
+        >
           <ButtonControl type="submit">Salvar</ButtonControl>
         </Button.Root>
       </div>

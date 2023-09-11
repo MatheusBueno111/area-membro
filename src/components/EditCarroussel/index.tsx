@@ -14,11 +14,15 @@ import { UseCurso } from '../../hooks/useCurso'
 const EditCarroussel: React.FC = () => {
   const [isCreateClassModalOpen, setIsCreateClassModalOpen] = useState(false)
   const [isEditClassModalOpen, setIsEditClassModalOpen] = useState(false)
-  const [isModalCriarCurso, setIsModalCriarCurso] = useState(false)
+  const [isModalCriarCursoOpen, setIsModalCriarCursoOpen] = useState(false)
   const { setCursos } = UseCurso()
 
   const openModalCriarCurso = () => {
-    setIsModalCriarCurso(true)
+    setIsModalCriarCursoOpen(true)
+  }
+
+  const closeModalCriarCurso = () => {
+    setIsModalCriarCursoOpen(false)
   }
 
   const openCreateClassModal = () => {
@@ -30,8 +34,11 @@ const EditCarroussel: React.FC = () => {
   }
 
   const openEditClassModal = () => {
-    // Altere o estado apenas para o modal de edição
     setIsEditClassModalOpen(true)
+  }
+
+  const closeEditClassModal = () => {
+    setIsEditClassModalOpen(false)
   }
 
   return (
@@ -80,10 +87,7 @@ const EditCarroussel: React.FC = () => {
           <SandwichIcon />
           <p className="text">Nome da Aula</p>
           <div className="align-right">
-            <button
-              className="edit-button"
-              onClick={openEditClassModal} // Abra o modal de edição ao clicar em "Editar"
-            >
+            <button className="edit-button" onClick={openEditClassModal}>
               Editar
             </button>
           </div>
@@ -92,10 +96,7 @@ const EditCarroussel: React.FC = () => {
           <SandwichIcon />
           <p className="text">Nome da Aula</p>
           <div className="align-right">
-            <button
-              className="edit-button"
-              onClick={openEditClassModal} // Abra o modal de edição ao clicar em "Editar"
-            >
+            <button className="edit-button" onClick={openEditClassModal}>
               Editar
             </button>
           </div>
@@ -103,12 +104,16 @@ const EditCarroussel: React.FC = () => {
       </div>
 
       <div className="modal">
-        {isCreateClassModalOpen && <ModalCreateClass />}
-        {isEditClassModalOpen && <ModalEditClass />}
-        {isModalCriarCurso && (
+        {isCreateClassModalOpen && (
+          <ModalCreateClass onClose={closeCreateClassModal} />
+        )}
+        {isEditClassModalOpen && (
+          <ModalEditClass onClose={closeEditClassModal} />
+        )}
+        {isModalCriarCursoOpen && (
           <ModalCriarCurso
             setCursos={setCursos}
-            onClose={closeCreateClassModal}
+            onClose={closeModalCriarCurso}
           />
         )}
       </div>

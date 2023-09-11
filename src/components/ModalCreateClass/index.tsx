@@ -4,7 +4,11 @@ import { Input } from '../CustomInput'
 import { Button } from '../CustomButtom'
 import ButtonControl from '../CustomButtom/ButtomControl'
 
-const ModalCreateClass: React.FC = () => {
+interface ModalCreateClassProps {
+  onClose: () => void
+}
+
+const ModalCreateClass: React.FC<ModalCreateClassProps> = ({ onClose }) => {
   const [selectedButton, setSelectedButton] = useState<number | null>(null)
 
   const handleButtonClick = (index: number) => {
@@ -81,12 +85,20 @@ const ModalCreateClass: React.FC = () => {
       </S.Wrapper>
       <div className="container">
         <Button.Root className="cancel-button">
-          <ButtonControl className="c-cancel-button" type="submit">
+          <ButtonControl
+            className="c-cancel-button"
+            type="submit"
+            onClick={onClose}
+          >
             Cancelar
           </ButtonControl>
         </Button.Root>
 
-        <Button.Root bgcolor="#FFC019" className="save-button">
+        <Button.Root
+          bgcolor="#FFC019"
+          className="save-button"
+          onClick={onClose}
+        >
           <ButtonControl type="submit">Salvar</ButtonControl>
         </Button.Root>
       </div>
