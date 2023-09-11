@@ -1,5 +1,3 @@
-// EditCarroussel.tsx
-
 import React, { useState } from 'react'
 import * as S from './styles'
 import { Button } from '../CustomButtom'
@@ -8,7 +6,6 @@ import { ViewIcon } from '../Icons/ViewIcon'
 import { SandwichIcon } from '../Icons/SandwichIcon'
 import Header from '../Header'
 
-// Importe os modais aqui
 import ModalCreateClass from '../ModalCreateClass'
 import ModalEditClass from '../ModalEditClass'
 import ModalCriarCurso from '../ModalCriarCurso'

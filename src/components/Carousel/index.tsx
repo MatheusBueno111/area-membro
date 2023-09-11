@@ -50,6 +50,93 @@ const Carousel: React.FC<CarouselProps> = ({ ...rest }) => {
             </div>
             <S.Image onClick={handleWatchClass} />
           </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          {cursos.length > 0
+            ? cursos.map((curso) => {
+                return (
+                  <S.IconContainer key={curso.id}>
+                    <div className="pencil-icon" onClick={handleEdit}>
+                      <PencilIcon />
+                    </div>
+
+                    <S.Image onClick={handleWatchClass} />
+                  </S.IconContainer>
+                )
+              })
+            : null}
+        </S.Wrapper>
+      </S.ScrollContainer>
+      <div className="button">
+        <Button.Root
+          bgcolor="#323C4C"
+          className="input-button"
+          onClick={handleOpenModal}
+        >
+          <ButtonControl style={{ color: 'white' }}>Criar curso</ButtonControl>
+        </Button.Root>
+      </div>
+      <p>Cursos e módulos</p>
+      <S.ScrollContainer>
+        <S.Wrapper>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
+          <S.IconContainer>
+            <div className="pencil-icon" onClick={handleEdit}>
+              <PencilIcon />
+            </div>
+            <S.Image onClick={handleWatchClass} />
+          </S.IconContainer>
           {cursos.length > 0
             ? cursos.map((curso) => {
                 return (
