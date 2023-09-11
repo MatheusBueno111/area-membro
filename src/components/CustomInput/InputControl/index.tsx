@@ -1,11 +1,14 @@
-import React, { ComponentProps } from 'react'
+import React, { ComponentProps, forwardRef } from 'react'
 
 import * as S from './styles'
 
 interface InputProps extends ComponentProps<'input'> {}
 
-const InputControl: React.FC<InputProps> = ({ ...rest }) => {
-  return <S.Container {...rest} />
+const InputControl: React.ForwardRefRenderFunction<
+  HTMLInputElement,
+  InputProps
+> = ({ ...rest }, ref) => {
+  return <S.Container ref={ref} {...rest} />
 }
 
-export default InputControl
+export default forwardRef(InputControl)

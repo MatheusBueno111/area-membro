@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 interface ContainerProps {
   width?: string
   height?: string
+  error?: string
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -13,6 +14,7 @@ export const Container = styled.div<ContainerProps>`
   height: ${({ height }) => height};
   background-color: ${({ theme }) => theme.colors.bgInput};
   border-radius: 0.4rem;
+  border: ${({ error }) => (error ? '1px solid red' : 'unset')};
 
   @media (min-width: 768px) {
     background: rgba(237, 237, 237, 0.1);

@@ -5,16 +5,18 @@ interface InputRootProps extends ComponentProps<'div'> {
   children: ReactNode
   width?: string
   height?: string
+  error?: string
 }
 
 const InputRoot: React.FC<InputRootProps> = ({
   children,
   width = '38rem',
   height = '4.8rem',
+  error,
   ...rest
 }) => {
   return (
-    <S.Container width={width} height={height} {...rest}>
+    <S.Container error={error} width={width} height={height} {...rest}>
       {children}
     </S.Container>
   )
