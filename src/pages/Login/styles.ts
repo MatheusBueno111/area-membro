@@ -1,5 +1,9 @@
 import { styled } from 'styled-components'
 
+// interface ErrorsInputProps {
+//   erros: string
+// }
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,6 +15,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 9rem 3.3rem 0;
+
+    .recover-password {
+      margin-top: 2.4rem;
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
 
   @media (min-width: 768px) {
@@ -74,10 +83,20 @@ export const Wrapper = styled.div`
     font-weight: 400;
   }
 
+  span {
+    color: #ff1919;
+    font-size: 1.2rem;
+  }
+
   @media (min-width: 768px) {
     width: 38rem;
 
     label {
+      font-size: 1.6rem;
+    }
+
+    span {
+      color: #ff1919;
       font-size: 1.6rem;
     }
   }
