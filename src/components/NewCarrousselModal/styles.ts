@@ -1,6 +1,6 @@
 // Seu arquivo de estilos (styles.js ou styles.ts)
 
-import { styled } from 'styled-components';
+import { styled } from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ export const Container = styled.div`
   .salvar-button {
     max-width: 500px;
     margin-top: 2.8rem;
-    margin-left:auto;
+    margin-left: auto;
     /* Estilo padrão do botão (cinza) */
     background-color: #8c8c8c;
 
@@ -60,25 +60,22 @@ export const Container = styled.div`
 
     /* Estilo quando o campo de entrada está vazio (cinza) */
     &.gray {
-      background-color: #8C8C8C;
+      background-color: #8c8c8c;
     }
   }
-
 
   @media (max-width: 768px) {
     .salvar-button {
       max-width: 145px;
-      max-height:51px;
+      max-height: 51px;
       margin-top: 2.8rem;
-      background-color: #FFC019;
-    &.gray {
-      background-color: #FFC019;
-    }
-    .carroussel-input.filled{
-      background-color:#333A47;
+      background-color: #ffc019;
+      &.gray {
+        background-color: #ffc019;
+      }
+      .carroussel-input.filled {
+        background-color: #333a47;
+      }
     }
   }
-  
- 
-
-  `;
+`

@@ -1,6 +1,5 @@
 import { styled } from 'styled-components'
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@ export const Container = styled.div`
   margin: auto;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
   p {
-    
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
@@ -25,39 +23,37 @@ export const Container = styled.div`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
-    
   }
   .container {
-    margin-bottom:20px;
-    display:flex;
+    margin-bottom: 20px;
+    display: flex;
     flex-direction: row;
   }
   .align-right {
-    margin-left:auto;
-    gap:32px;
+    margin-left: auto;
+    gap: 32px;
   }
   .exit-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:auto;
+    margin-left: auto;
     width: 2.8rem;
-    height:2.8rem;
+    height: 2.8rem;
     background-color: none;
     background: rgba(237, 237, 237, 0.2);
     border-radius: 50%;
     cursor: pointer;
   }
-  .edit-button{
-    color:#FFC019;
+  .edit-button {
+    color: #ffc019;
   }
   .exclude-button {
-    margin-left:18px;
-    color: #FF3131;
-
+    margin-left: 18px;
+    color: #ff3131;
   }
-  
-  @media (max-width:768px) {
-    width: 380px;
-  }`
 
+  @media (max-width: 768px) {
+    width: 380px;
+  }
+`

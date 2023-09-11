@@ -2,26 +2,25 @@ import React, { ComponentProps, useState } from 'react'
 import * as S from './styles'
 import { SandwichIcon } from '../Icons/SandwichIcon'
 import { SearchIcon } from '../Icons/SearchIcon'
-import { Input } from '../CustomInput'
+
 import { UserIcon } from '../Icons/UserIcon'
 import UserModal from '../UserModal'
 import CarrousselModal from '../CarrousselModal'
 import { CarrousselIcon } from '../Icons/CarrousselIcon'
 import { GalleryIcon } from '../Icons/GalleryIcon'
+import { PencilIcon } from '../Icons/PencilIcon'
+import ModalBannerEdit from '../ModalBannerEdit'
 
-
-
-interface HeaderProps extends ComponentProps<'header'> {
-  showsearchbar?: boolean
-}
+interface HeaderProps extends ComponentProps<'header'> {}
 
 enum ModalType {
   None,
   User,
   Carroussel,
+  Banner,
 }
 
-const Header: React.FC<HeaderProps> = ({ showsearchbar = true, ...rest }) => {
+const Header: React.FC<HeaderProps> = ({ ...rest }) => {
   const [activeModal, setActiveModal] = useState(ModalType.None)
 
   const toggleModal = (modalType: ModalType) => {
@@ -32,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({ showsearchbar = true, ...rest }) => {
 
   const isUserModalOpen = activeModal === ModalType.User
   const isCarrousselModalOpen = activeModal === ModalType.Carroussel
+  const isBannerModalOpen = activeModal === ModalType.Banner
 
   return (
     <S.Container {...rest}>
@@ -41,17 +41,15 @@ const Header: React.FC<HeaderProps> = ({ showsearchbar = true, ...rest }) => {
       >
         <SandwichIcon />
       </div>
-      <S.SearchBar showsearchbar={showsearchbar}>
-        <Input.Root className="search-bar">
-          <Input.Prefix>
-            <SearchIcon />
-          </Input.Prefix>
-          <Input.Control placeholder="Pesquisar" />
-        </Input.Root>
-      </S.SearchBar>
 
       <img src="./logo.png" alt="" />
       <S.Wrapper>
+        <div
+          className="carroussel-icon"
+          onClick={() => toggleModal(ModalType.Banner)}
+        >
+          <PencilIcon />
+        </div>
         <div className="gallery-icon">
           <GalleryIcon />
         </div>
@@ -70,6 +68,7 @@ const Header: React.FC<HeaderProps> = ({ showsearchbar = true, ...rest }) => {
       </S.Wrapper>
       {isUserModalOpen && <UserModal />}
       {isCarrousselModalOpen && <CarrousselModal />}
+      {isBannerModalOpen && <ModalBannerEdit />}
     </S.Container>
   )
 }

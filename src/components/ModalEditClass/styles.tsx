@@ -13,17 +13,13 @@ export const Container = styled.div`
   right: 10px;
   margin: auto;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
-
-  `
-  
-
-
+`
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-  margin-top:32px;
+  margin-top: 32px;
 
   label {
     color: ${({ theme }) => theme.colors.white};
@@ -46,16 +42,16 @@ export const Wrapper = styled.div`
     gap: 16px;
     align-items: center;
   }
-  
+
   .button-with-label {
     display: flex;
     align-items: center;
   }
-  
+
   .radial-button {
     width: 40px;
     height: 40px;
-    border: 2px solid #FFF;
+    border: 2px solid #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -63,7 +59,7 @@ export const Wrapper = styled.div`
     cursor: pointer;
     position: relative;
   }
-  
+
   .radial-button .radial-inner {
     width: 100%;
     height: 100%;
@@ -73,7 +69,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
   }
-  
+
   .radial-button.selected .radial-inner {
     width: 80%;
     height: 80%;
@@ -84,23 +80,16 @@ export const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .radial-button.selected {
     border: 2px solid #f5d742; /* Alterado para borda amarela quando selecionado */
   }
-  
+
   .button-label {
     color: #fff;
     margin-left: 8px;
   }
-  
-  
-  
-  
-  
-  
-  
-  
+
   .button-label {
     color: #fff;
     margin-left: 8px;
@@ -117,60 +106,54 @@ export const Wrapper = styled.div`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     font-size: 16px;
-    margin-left:-20px;
-    
+    margin-left: -20px;
   }
   .container {
-    margin-bottom:20px;
-    display:flex;
+    margin-bottom: 20px;
+    display: flex;
     flex-direction: column;
   }
 
-  }
   .switch-button {
-    margin-left:auto;
+    margin-left: auto;
   }
-
-
 
   .save-button {
-    margin-left:auto;
-    max-width:150px;
-}
-.cancel-button {
-    margin-left:auto;
-    margin-left:140px;
-    max-width:150px;
-    background:none;
-}
-.c-cancel-button {
-    color: #FFF;
+    margin-left: auto;
+    max-width: 150px;
+  }
+  .cancel-button {
+    margin-left: auto;
+    margin-left: 140px;
+    max-width: 150px;
+    background: none;
+  }
+  .c-cancel-button {
+    color: #fff;
     font-weight: 400;
-}
+  }
 
-.exclude-button {
-    width:50px;
-    margin-right:auto;
-    margin-left:140px;
-    max-width:150px;
-    background:none;
-}
-.exclude-button-text {
-    color: #FF3131;
+  .exclude-button {
+    width: 50px;
+    margin-right: auto;
+    margin-left: 140px;
+    max-width: 150px;
+    background: none;
+  }
+  .exclude-button-text {
+    color: #ff3131;
     font-weight: 400;
-}
+  }
 
-.add-button {
-    width:140px;
-    margin-right:auto;
-    max-width:150px;
-    background:#323C4C;
-    margin-left:-1px;
-}
-.add-button-text {
-    color: #FFF;
+  .add-button {
+    width: 140px;
+    margin-right: auto;
+    max-width: 150px;
+    background: #323c4c;
+    margin-left: -1px;
+  }
+  .add-button-text {
+    color: #fff;
     font-weight: 400;
-}
+  }
 `
-
-

@@ -12,7 +12,7 @@ import DescriptionVideo from './components/DescriptionVideo'
 const Class: React.FC = () => {
   return (
     <S.Container>
-      <Header showsearchbar={false} />
+      <Header />
       <S.Wrapper>
         <S.Main>
           <S.VideoClass />
