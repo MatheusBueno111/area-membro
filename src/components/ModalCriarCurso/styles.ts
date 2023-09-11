@@ -7,10 +7,11 @@ export const Container = styled.div`
   width: 485px;
   height: 790px;
   border-radius: 8px;
-  padding: 1rem 0.8rem 2.4rem 2rem;
+  padding: 3.2rem 2.4rem;
   position: absolute;
-  top: 100px;
-  left: 33%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
 
@@ -22,13 +23,18 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
-  margin-top: -5px;
+  gap: 2.5rem;
+
+  form {
+    display: flex;
+    padding-left: 2.4rem;
+  }
 
   label {
     color: ${({ theme }) => theme.colors.white};
     font-size: 1.2rem;
     font-weight: 400;
+    margin-top: 1rem;
   }
 
   .input-container-descricao {
@@ -53,7 +59,7 @@ export const Wrapper = styled.div`
     margin-left: auto;
   }
   .title {
-    margin-left: -15px;
+    margin-top: 1rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
@@ -95,6 +101,7 @@ export const SquareWrapper = styled.div`
   width: 195px;
   height: 264px;
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: top;
