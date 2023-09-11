@@ -5,6 +5,7 @@ import { styled } from 'styled-components'
 import Home from './pages/Home'
 import Class from './pages/Class'
 import EditCarroussel from './components/EditCarroussel'
+import Profile from './pages/Profile'
 
 const Wrapper = styled.div`
   display: flex;
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: '/edit-carroussel',
         element: <EditCarroussel />,
+      },
+      {
+        path: '/my-profile',
+        element: <Profile />,
       },
     ],
   },

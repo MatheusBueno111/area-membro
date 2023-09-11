@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 
 const links = [
   { linkName: 'Inicio', icon: <HouseIcon />, path: '/' },
-  { linkName: 'Minha conta', icon: <UserCircleIcon />, path: '/' },
+  { linkName: 'Minha conta', icon: <UserCircleIcon />, path: '/my-profile' },
   {
     linkName: 'Central de notificações',
     icon: <CertificationIcon />,
