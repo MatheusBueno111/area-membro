@@ -6,9 +6,33 @@ export const Container = styled.div`
   p {
     color: ${({ theme }) => theme.colors.white};
     font-family: 'Inter';
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 700;
     margin-top: 1.2rem;
+    margin-bottom:3rem;
+  }
+
+  .button {
+    margin-left:auto;
+    margin-bottom:-4rem;
+    margin-right:10px;    
+  }
+  .input-button{
+    color: text-white;
+  }
+
+  .pencil-icon {
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:12px;
+    width: 2.8rem;
+    height:2.8rem;
+    background-color: none;
+    background: #323C4D;
+    border-radius: 70%;
+    cursor: pointer;
   }
 
   @media (min-width: 768px) {
@@ -18,6 +42,11 @@ export const Container = styled.div`
     }
   }
 `
+export const IconContainer = styled.div`
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+`;
 
 export const ScrollContainer = styled.div`
   overflow-x: auto;
@@ -59,6 +88,8 @@ export const Image = styled.div`
     height: 33.6rem;
   }
 `
+
+
 
 export const Wrapper = styled.div`
   display: flex;

@@ -59,6 +59,27 @@ export const Wrapper = styled.div`
   }
 
   @media (min-width: 768px) {
+    .gallery-icon {
+      height: 4.8rem;
+      width: 4.8rem;
+      order: 0;
+      background-color: none;
+      background: rgba(237, 237, 237, 0.2);
+      border-radius: 9999px;
+      align-items: center;
+      justify-content: center;
+    }
+    .carroussel-icon {
+      height: 4.8rem;
+      width: 4.8rem;
+      order: 0;
+      background-color: none;
+      background: rgba(237, 237, 237, 0.2);
+      border-radius: 9999px;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+    }
     .search-icon {
       height: 4.8rem;
       width: 4.8rem;
