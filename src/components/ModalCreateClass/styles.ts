@@ -5,14 +5,24 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.background};
   width: 485px;
-  height: 650px;
+  height: 700px;
   border-radius: 8px;
   padding: 1rem 0.8rem 2.4rem 2rem;
   position: absolute;
   top: 80px;
-  right: 10px;
+  right: 40%;
   margin: auto;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
+  .cancel-button {
+    margin-left: auto;
+    margin-left: 140px;
+    max-width: 150px;
+    background: none;
+  }
+  .c-cancel-button {
+    color: #fff;
+    font-weight: 400;
+  }
 `
 
 export const Wrapper = styled.div`

@@ -15,7 +15,7 @@ const ModalEditClass: React.FC = () => {
     <S.Container>
       <S.Wrapper>
         <div className="container">
-          <div className="title">Criar aula</div>
+          <div className="title">Editar aula</div>
         </div>
         <div className="button-group">
           <div className="button-with-label">
@@ -85,7 +85,7 @@ const ModalEditClass: React.FC = () => {
         </Input.Root>
       </S.Wrapper>
       <div className="container">
-        <Button.Root bgcolor="#FFC019" className="exclude-button">
+        <Button.Root className="exclude-button">
           <ButtonControl className="exclude-button-text" type="submit">
             Excluir
           </ButtonControl>

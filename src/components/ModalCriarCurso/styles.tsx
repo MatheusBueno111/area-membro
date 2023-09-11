@@ -5,13 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.background};
   width: 485px;
-  height: 780px;
+  height: 790px;
   border-radius: 8px;
   padding: 1rem 0.8rem 2.4rem 2rem;
-  position: absolute;
-  top: 80px;
-  right: 10px;
-  margin: auto;
+  position:absolute;
+  top: 100px;
+  left: 33%;
+  
+  
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
 `
 
@@ -19,7 +20,8 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-  margin-top: 32px;
+  margin-top: -5px;
+  
 
   label {
     color: ${({ theme }) => theme.colors.white};
@@ -44,13 +46,18 @@ export const Wrapper = styled.div`
       font-size: 1.6rem;
     }
   }
+  .save-button {
+    width:150px;
+    margin-left:auto;
+  }
   .title {
+    margin-left:-15px;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
   }
   .container {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
   }
@@ -72,7 +79,7 @@ export const Wrapper = styled.div`
 
   span {
     margin-top: -25px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -94,7 +101,7 @@ export const SquareWrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
   button {
     background-color: none;
-    padding: 90px 8px 16px;
+    padding: 50px 8px 16px;
     border: none;
     border-radius: 4px;
     color: ${({ theme }) => theme.colors.yellow};
