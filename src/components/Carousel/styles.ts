@@ -9,28 +9,28 @@ export const Container = styled.div`
     font-size: 24px;
     font-weight: 700;
     margin-top: 1.2rem;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
   }
 
   .button {
-    margin-left:auto;
-    margin-bottom:-4rem;
-    margin-right:10px;    
+    margin-left: auto;
+    margin-bottom: -4rem;
+    margin-right: 10px;
   }
-  .input-button{
+  .input-button {
     color: text-white;
   }
 
   .pencil-icon {
-    position:absolute;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:12px;
+    margin: 12px;
     width: 2.8rem;
-    height:2.8rem;
+    height: 2.8rem;
     background-color: none;
-    background: #323C4D;
+    background: #323c4d;
     border-radius: 70%;
     cursor: pointer;
   }
@@ -46,7 +46,7 @@ export const IconContainer = styled.div`
   position: relative;
   display: inline-block;
   margin: 0px;
-`;
+`
 
 export const ScrollContainer = styled.div`
   overflow-x: auto;
@@ -88,8 +88,6 @@ export const Image = styled.div`
     height: 33.6rem;
   }
 `
-
-
 
 export const Wrapper = styled.div`
   display: flex;
