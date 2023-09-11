@@ -22,7 +22,7 @@ export const Container = styled.div`
     background: none;
   }
   .exclude-button-text {
-    color: #FF3131;
+    color: #ff3131;
     font-weight: 400;
   }
   .save-button {
@@ -120,7 +120,6 @@ export const Wrapper = styled.div`
     color: #fff;
     margin-left: 8px;
   }
-  
 
   @media (min-width: 768px) {
     width: 45rem;
@@ -145,11 +144,6 @@ export const Wrapper = styled.div`
     margin-left: auto;
   }
 
-
-
-
-
-
   .add-button {
     width: 140px;
     margin-right: auto;
@@ -161,5 +155,4 @@ export const Wrapper = styled.div`
     color: #fff;
     font-weight: 400;
   }
-
 `

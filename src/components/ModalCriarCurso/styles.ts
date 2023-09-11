@@ -8,11 +8,10 @@ export const Container = styled.div`
   height: 790px;
   border-radius: 8px;
   padding: 1rem 0.8rem 2.4rem 2rem;
-  position:absolute;
+  position: absolute;
   top: 100px;
   left: 33%;
-  
-  
+
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.8);
 `
 
@@ -21,7 +20,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: 1.3rem;
   margin-top: -5px;
-  
 
   label {
     color: ${({ theme }) => theme.colors.white};
@@ -47,11 +45,11 @@ export const Wrapper = styled.div`
     }
   }
   .save-button {
-    width:150px;
-    margin-left:auto;
+    width: 150px;
+    margin-left: auto;
   }
   .title {
-    margin-left:-15px;
+    margin-left: -15px;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     size: 16px;
